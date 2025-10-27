@@ -1,44 +1,67 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Новости</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 
 <body>
-    <div class="header">Хэдер</div>
-    <div class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    <div id="content">
-        <div class="news-block">
-            <h1>Новость 1</h1>
-            <h5>01.01.2025 12:00 Л.Н. Толстой</h5>
-            <p>Текст новости 1: Если бы в моё время были нейросети, вы бы все 11 классов читали "Войну и мир".</p>
-        </div>
 
-        <div class="news-block">
-            <h1>Новость 2</h1>
-            <h5>01.03.2025 12:00 А.С. Пушкин</h5>
-            <p>Текст новости 2: Спать охота</p>
-        </div>
+    <div class="page-container">
+   
+        <header class="header">
+  
+            <h1>Новости</h1>
+        </header>
 
-        <div class="news-block">
-            <h1>Новость 3</h1>
-            <h5>01.03.2025 12:00 М.Ю. Лермонтов</h5>
-            <p>Текст новости 3: Бла-бла</p>
-        </div>
+    
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        
+        <main class="content">
+           
+            <h2 class="section-title">Последние новости</h2>
+
+          
+            <div class="news-container">
+               
+                <article class="news-block">
+                    <h3 class="news-title">Новость 1</h3>
+                    <h5 class="news-meta">01.01.2025 12:00 | Автор: Л.Н. Толстой</h5>
+                    <p class="news-text">Текст новости 1: Если бы в моё время были нейросети, вы бы все 11 классов
+                        читали "Войну и мир".</p>
+                </article>
+
+                <article class="news-block">
+                    <h3 class="news-title">Новость 2</h3>
+                    <h5 class="news-meta">01.03.2025 12:00 | Автор: А.С. Пушкин</h5>
+                    <p class="news-text">Текст новости 2: Спать охота</p>
+                </article>
+
+                <article class="news-block">
+                    <h3 class="news-title">Новость 3</h3>
+                    <h5 class="news-meta">01.03.2025 12:00 | Автор: М.Ю. Лермонтов</h5>
+                    <p class="news-text">Текст новости 3: Бла-бла</p>
+                </article>
+            </div>
+        </main>
+
+     
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
     </div>
-    <div class="footer">Футер</div>
 </body>
 
 </html>

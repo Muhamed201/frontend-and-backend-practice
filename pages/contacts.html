@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+        <header class="header">
+            <h1>Контакты</h1>
+        </header>
+
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -19,16 +22,25 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="content">
-            <p class="contact-title">Контакты</p>
-            <p class="contact-block">Адрес электронной почты: ramazanov.m.k1@edu.mirea.ru</p>
-            <p class="contact-block">Адрес: г. Москва, ул. Поречная, д. 3</p>
-            <div class="button-container">
-                <button class="buttoncall">Позвоните мне</button>
-            </div>
-        </div>
-        <div class="footer">Футер</div>
+        </nav>
+
+        <main class="content">
+            <section class="contacts-container">
+                <h2 class="section-title">Контакты</h2>
+                <div class="contact-info">
+                    <p>Адрес электронной почты: ramazanov.m.k1@edu.mirea.ru</p>
+                    <p>Адрес: г. Москва, ул. Поречная, д. 3</p>
+                </div>
+                <div class="button-container">
+                    <button class="contact-button">Позвоните мне</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
+    </div>
 </body>
 
 </html>

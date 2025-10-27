@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lamg="ru">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Товары</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 
 <body>
     <div class="page-container">
-        <div class="header">Хэдер</div>
-        <div class="nav">
+        <header class="header">
+            <h1>Товары</h1>
+        </header>
+
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -19,25 +22,33 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="goods-container">
-            <div class="goods-block">
-                <img class="goods-photo" src="../images/lojka.jpg">
-                <p>Ложка</p>
-                <p>Цена: 200 р.</p>
+        </nav>
+
+        <main class="content">
+            <h2 class="section-title">Наши товары</h2>
+            <div class="goods-container">
+                <article class="goods-block">
+                    <img class="goods-photo" src="../images/lojka.jpg" alt="Ложка">
+                    <h3 class="product-name">Ложка</h3>
+                    <p class="product-price">Цена: 200 р.</p>
+                </article>
+                <article class="goods-block">
+                    <img class="goods-photo" src="../images/stakan.jpeg" alt="Стакан">
+                    <h3 class="product-name">Стакан</h3>
+                    <p class="product-price">Цена: 300 р.</p>
+                </article>
+                <article class="goods-block">
+                    <img class="goods-photo" src="../images/tarelka.jpeg" alt="Тарелка">
+                    <h3 class="product-name">Тарелка</h3>
+                    <p class="product-price">Цена: 500 р.</p>
+                </article>
             </div>
-            <div class="goods-block">
-                <img class="goods-photo" src="../images/stakan.jpeg">
-                <p>Стакан</p>
-                <p>Цена: 300 р.</p>
-            </div>
-            <div class="goods-block">
-                <img class="goods-photo" src="../images/tarelka.jpeg">
-                <p>Тарелка</p>
-                <p>Цена: 500 р.</p>
-            </div>
-        </div>
-        <div class="footer">Футер</div>
+        </main>
+
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
+    </div>
 </body>
 
 </html>
