@@ -9,80 +9,103 @@
 </head>
 
 <body>
-
-    <div class="page-container">
-       
+    <div class="page">
         <header class="header">
-      
-            <h1>Главная</h1>
+            <h1 class="header__title">Главная</h1>
+            <div class="theme-switcher">
+                <button class="theme-switcher__btn theme-switcher__btn--light" data-theme="light">
+                    ☀️
+                </button>
+                <button class="theme-switcher__btn theme-switcher__btn--dark" data-theme="dark">
+                    🌙
+                </button>
+            </div>
         </header>
 
-    
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
 
-       
-        <main class="content">
-          
-            <article class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/cotik.jpg" alt="Фото автора">
-                <h2 class="profile-name">Рамазанов Мухамед Хаирбегович</h2>
-                <p class="profile-group">ЭФБО-16-24</p>
+        <main class="main">
+            <article class="profile">
+                <h1 class="profile__title">Информация об авторе</h1>
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/cotik.jpg" alt="Фото автора">
+                    <div class="profile__info">
+                        <h2 class="profile__name">Рамазанов Мухамед Хаирбегович</h2>
+                        <p class="profile__group">ЭФБО-16-24</p>
+                    </div>
+                </div>
             </article>
 
-            
-            <section class="about-me">
-                <h2>Обо мне</h2>
-                <p>Я родился в Москве в 2005 году. Каждый год я переезжал между Москвой и Дагестаном. После окончания школы я поступил в МГТУ им. Баумана, но проучился там недолго...</p>
-            </section>
-
-      
-            <section class="skills-container">
-                <h2>Мои навыки</h2>
-                
-                <div class="skills-grid">
-                    <div class="skill-tag">Спать</div>
-                    <div class="skill-tag">Кушать</div>
-                    <div class="skill-tag">Отдыхать</div>
-                    <div class="skill-tag">Знаю квантовую физику</div>
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        Я родился в Москве в 2005 году. Каждый год я переезжал между Москвой и Дагестаном.
+                        После окончания школы я поступил в МГТУ им. Баумана, но проучился там недолго...
+                    </p>
                 </div>
             </section>
 
-            <section class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-               
-                <div class="experience-grid">
-                   
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--sleep">
+                        <span class="skill__name">Спать</span>
+                    </div>
+                    <div class="skill skill--eat">
+                        <span class="skill__name">Кушать</span>
+                    </div>
+                    <div class="skill skill--rest">
+                        <span class="skill__name">Отдыхать</span>
+                    </div>
+                    <div class="skill skill--physics">
+                        <span class="skill__name">Знаю квантовую физику</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__grid">
                     <article class="experience-card">
-                        <h3 class="experience-title">Опыт 1</h3>
-                        <p class="experience-desc">Солил огурцы, помидоры, чеснок.</p>
+                        <h3 class="experience-card__title">Опыт 1</h3>
+                        <p class="experience-card__desc">Солил огурцы, помидоры, чеснок.</p>
                     </article>
                     <article class="experience-card">
-                        <h3 class="experience-title">Опыт 2</h3>
-                        <p class="experience-desc">Работал на стройке.</p>
+                        <h3 class="experience-card__title">Опыт 2</h3>
+                        <p class="experience-card__desc">Работал на стройке.</p>
                     </article>
                     <article class="experience-card">
-                        <h3 class="experience-title">Опыт 3</h3>
-                        <p class="experience-desc">Подрабатывал репетитором.</p>
+                        <h3 class="experience-card__title">Опыт 3</h3>
+                        <p class="experience-card__desc">Подрабатывал репетитором.</p>
                     </article>
                 </div>
             </section>
         </main>
 
-     
         <footer class="footer">
-            
-            <p>Футер</p>
+            <p class="footer__text">© 2024 - Все права защищены</p>
         </footer>
     </div>
+    <script src="js/theme.js"></script>
 </body>
 
 </html>

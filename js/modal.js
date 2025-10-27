@@ -1,8 +1,11 @@
 
+// В modal.js замени
 const contactModal = document.getElementById('contactModal');
 const openModalBtn = document.getElementById('openModalBtn');
 const submitFormBtn = document.getElementById('submitFormBtn');
 const feedbackForm = document.getElementById('feedbackForm');
+
+// Остальной код остается таким же
 
 function openModal() {
     contactModal.showModal();

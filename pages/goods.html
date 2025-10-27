@@ -9,46 +9,91 @@
 </head>
 
 <body>
-    <div class="page-container">
+    <div class="page">
         <header class="header">
-            <h1>Товары</h1>
+            <h1 class="header__title">Товары</h1>
+            <div class="theme-switcher">
+                <button class="theme-switcher__btn theme-switcher__btn--light" data-theme="light">
+                    ☀️
+                </button>
+                <button class="theme-switcher__btn theme-switcher__btn--dark" data-theme="dark">
+                    🌙
+                </button>
+            </div>
         </header>
 
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="cart.html">
+                        Корзина <span class="nav__cart-counter">(0)</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <main class="content">
-            <h2 class="section-title">Наши товары</h2>
-            <div class="goods-container">
-                <article class="goods-block">
-                    <img class="goods-photo" src="../images/lojka.jpg" alt="Ложка">
-                    <h3 class="product-name">Ложка</h3>
-                    <p class="product-price">Цена: 200 р.</p>
-                </article>
-                <article class="goods-block">
-                    <img class="goods-photo" src="../images/stakan.jpeg" alt="Стакан">
-                    <h3 class="product-name">Стакан</h3>
-                    <p class="product-price">Цена: 300 р.</p>
-                </article>
-                <article class="goods-block">
-                    <img class="goods-photo" src="../images/tarelka.jpeg" alt="Тарелка">
-                    <h3 class="product-name">Тарелка</h3>
-                    <p class="product-price">Цена: 500 р.</p>
-                </article>
-            </div>
+        <main class="main">
+            <section class="products">
+                <h2 class="products__title">Наши товары</h2>
+                <div class="products__grid">
+                    <article class="product-card product-card--discount">
+                        <div class="product-card__badge">Хит</div>
+                        <img class="product-card__image" src="../images/lojka.jpg" alt="Ложка">
+                        <h3 class="product-card__name">Ложка</h3>
+                        <p class="product-card__price">Цена: 200 р.</p>
+                        <div class="product-card__actions">
+                            <button class="button button--primary product-card__btn">В корзину</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card--discount">
+                        <div class="product-card__badge">-20%</div>
+                        <img class="product-card__image" src="../images/stakan.jpeg" alt="Стакан">
+                        <h3 class="product-card__name">Стакан</h3>
+                        <p class="product-card__price">
+                            <span class="product-card__price-old">375 р.</span>
+                            <span class="product-card__price-new">300 р.</span>
+                        </p>
+                        <div class="product-card__actions">
+                            <button class="button button--primary product-card__btn">В корзину</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card--out-of-stock">
+                        <div class="product-card__badge">Нет в наличии</div>
+                        <img class="product-card__image" src="../images/tarelka.jpeg" alt="Тарелка">
+                        <h3 class="product-card__name">Тарелка</h3>
+                        <p class="product-card__price">Цена: 500 р.</p>
+                        <div class="product-card__actions">
+                            <button class="button button--secondary product-card__btn" disabled>Нет в наличии</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
-            <p>Футер</p>
+            <p class="footer__text">© 2024 - Все права защищены</p>
         </footer>
     </div>
+    <script src="../js/theme.js"></script>
+    <script src="../js/products.js"></script>
 </body>
 
 </html>

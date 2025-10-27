@@ -9,59 +9,76 @@
 </head>
 
 <body>
-
-    <div class="page-container">
-   
+    <div class="page">
         <header class="header">
-  
-            <h1>Новости</h1>
+            <h1 class="header__title">Новости</h1>
+            <div class="theme-switcher">
+                <button class="theme-switcher__btn theme-switcher__btn--light" data-theme="light">
+                    ☀️
+                </button>
+                <button class="theme-switcher__btn theme-switcher__btn--dark" data-theme="dark">
+                    🌙
+                </button>
+            </div>
         </header>
 
-    
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
 
-        
-        <main class="content">
-           
-            <h2 class="section-title">Последние новости</h2>
+        <main class="main">
+            <section class="news">
+                <h2 class="news__title">Последние новости</h2>
+                <div class="news__list">
+                    <article class="news-item">
+                        <h3 class="news-item__title">Новость 1</h3>
+                        <p class="news-item__meta">01.01.2025 12:00 | Автор: Л.Н. Толстой</p>
+                        <div class="news-item__content">
+                            <p class="news-item__text">Текст новости 1: Если бы в моё время были нейросети, вы бы все 11
+                                классов читали "Войну и мир".</p>
+                        </div>
+                    </article>
 
-          
-            <div class="news-container">
-               
-                <article class="news-block">
-                    <h3 class="news-title">Новость 1</h3>
-                    <h5 class="news-meta">01.01.2025 12:00 | Автор: Л.Н. Толстой</h5>
-                    <p class="news-text">Текст новости 1: Если бы в моё время были нейросети, вы бы все 11 классов
-                        читали "Войну и мир".</p>
-                </article>
+                    <article class="news-item">
+                        <h3 class="news-item__title">Новость 2</h3>
+                        <p class="news-item__meta">01.03.2025 12:00 | Автор: А.С. Пушкин</p>
+                        <div class="news-item__content">
+                            <p class="news-item__text">Текст новости 2: Спать охота</p>
+                        </div>
+                    </article>
 
-                <article class="news-block">
-                    <h3 class="news-title">Новость 2</h3>
-                    <h5 class="news-meta">01.03.2025 12:00 | Автор: А.С. Пушкин</h5>
-                    <p class="news-text">Текст новости 2: Спать охота</p>
-                </article>
-
-                <article class="news-block">
-                    <h3 class="news-title">Новость 3</h3>
-                    <h5 class="news-meta">01.03.2025 12:00 | Автор: М.Ю. Лермонтов</h5>
-                    <p class="news-text">Текст новости 3: Бла-бла</p>
-                </article>
-            </div>
+                    <article class="news-item">
+                        <h3 class="news-item__title">Новость 3</h3>
+                        <p class="news-item__meta">01.03.2025 12:00 | Автор: М.Ю. Лермонтов</p>
+                        <div class="news-item__content">
+                            <p class="news-item__text">Текст новости 3: Бла-бла</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
-     
         <footer class="footer">
-            <p>Футер</p>
+            <p class="footer__text">© 2024 - Все права защищены</p>
         </footer>
     </div>
+    <script src="../js/theme.js"></script>
 </body>
 
 </html>
