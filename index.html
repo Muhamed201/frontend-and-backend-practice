@@ -4,107 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Главная - Портфолио</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Ваши стили (оставлю для темы) -->
     <link rel="stylesheet" href="style/styles.css">
 </head>
 
-<body>
-    <div class="page">
-        <header class="header">
-            <h1 class="header__title">Главная</h1>
-            <div class="theme-switcher">
-                <button class="theme-switcher__btn theme-switcher__btn--light" data-theme="light">
-                    ☀️
-                </button>
-                <button class="theme-switcher__btn theme-switcher__btn--dark" data-theme="dark">
-                    🌙
-                </button>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Главная</h1>
+                        <p class="mb-0 opacity-75">Портфолио студента</p>
+                    </div>
+                    <div class="col-auto">
+                        <div class="theme-switcher">
+                            <button class="btn btn-light btn-sm me-2 theme-switcher__btn theme-switcher__btn--light" data-theme="light">
+                                ☀️
+                            </button>
+                            <button class="btn btn-dark btn-sm theme-switcher__btn theme-switcher__btn--dark" data-theme="dark">
+                                🌙
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/news.html">Новости</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/practices.html">Практики</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/goods.html">Товары</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
-                </li>
-            </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
-        <main class="main">
-            <article class="profile">
-                <h1 class="profile__title">Информация об авторе</h1>
-                <div class="profile__card">
-                    <img class="profile__photo" src="images/cotik.jpg" alt="Фото автора">
-                    <div class="profile__info">
-                        <h2 class="profile__name">Рамазанов Мухамед Хаирбегович</h2>
-                        <p class="profile__group">ЭФБО-16-24</p>
-                    </div>
-                </div>
-            </article>
-
-            <section class="about">
-                <h2 class="about__title">Обо мне</h2>
-                <div class="about__content">
-                    <p class="about__text">
-                        Я родился в Москве в 2005 году. Каждый год я переезжал между Москвой и Дагестаном.
-                        После окончания школы я поступил в МГТУ им. Баумана, но проучился там недолго...
-                    </p>
-                </div>
-            </section>
-
-            <section class="skills">
-                <h2 class="skills__title">Мои навыки</h2>
-                <div class="skills__list">
-                    <div class="skill skill--sleep">
-                        <span class="skill__name">Спать</span>
-                    </div>
-                    <div class="skill skill--eat">
-                        <span class="skill__name">Кушать</span>
-                    </div>
-                    <div class="skill skill--rest">
-                        <span class="skill__name">Отдыхать</span>
-                    </div>
-                    <div class="skill skill--physics">
-                        <span class="skill__name">Знаю квантовую физику</span>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Profile Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="images/cotik.jpg" alt="Фото автора" 
+                                     class="img-fluid rounded-circle" 
+                                     style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="card-title h4 text-primary">Рамазанов Мухамед Хаирбегович</h2>
+                                <p class="card-text text-muted mb-2">
+                                    <i class="bi bi-bookmark-check-fill text-primary"></i>
+                                    Студент группы ЭФБО-16-24
+                                </p>
+                                <p class="card-text">
+                                    МГТУ им. Баумана
+                                </p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <span class="badge bg-primary">Спать</span>
+                                    <span class="badge bg-success">Кушать</span>
+                                    <span class="badge bg-info">Отдыхать</span>
+                                    <span class="badge bg-warning">Квантовая физика</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="experience">
-                <h2 class="experience__title">Мой опыт работы</h2>
-                <div class="experience__grid">
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">Опыт 1</h3>
-                        <p class="experience-card__desc">Солил огурцы, помидоры, чеснок.</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">Опыт 2</h3>
-                        <p class="experience-card__desc">Работал на стройке.</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">Опыт 3</h3>
-                        <p class="experience-card__desc">Подрабатывал репетитором.</p>
-                    </article>
+            <!-- About Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-person-circle text-primary"></i>
+                            Обо мне
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Я родился в Москве в 2005 году. Каждый год я переезжал между Москвой и Дагестаном.
+                            После окончания школы я поступил в МГТУ им. Баумана, но проучился там недолго...
+                        </p>
+                        <p class="card-text text-muted">
+                            В свободное время занимаюсь саморазвитием и изучением новых технологий.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-tools text-primary"></i>
+                            Мои навыки
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Спать</span>
+                                        <span class="text-primary">95%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-primary" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Кушать</span>
+                                        <span class="text-primary">90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Отдыхать</span>
+                                        <span class="text-primary">85%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-info" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Квантовая физика</span>
+                                        <span class="text-primary">80%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-warning" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-briefcase text-primary"></i>
+                            Мой опыт работы
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-egg-fried display-4 text-warning mb-3"></i>
+                                        <h5 class="card-title">Опыт 1</h5>
+                                        <p class="card-text text-muted">
+                                            Солил огурцы, помидоры, чеснок
+                                        </p>
+                                        <span class="badge bg-warning">Кулинария</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-hammer display-4 text-secondary mb-3"></i>
+                                        <h5 class="card-title">Опыт 2</h5>
+                                        <p class="card-text text-muted">
+                                            Работал на стройке
+                                        </p>
+                                        <span class="badge bg-secondary">Строительство</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <i class="bi bi-mortarboard display-4 text-info mb-3"></i>
+                                        <h5 class="card-title">Опыт 3</h5>
+                                        <p class="card-text text-muted">
+                                            Подрабатывал репетитором
+                                        </p>
+                                        <span class="badge bg-info">Образование</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer class="footer">
-            <p class="footer__text">© 2024 - Все права защищены</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">© 2024 - Все права защищены</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ваши скрипты -->
     <script src="js/theme.js"></script>
 </body>
 

@@ -69,41 +69,58 @@ document.addEventListener('DOMContentLoaded', function() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         
-        // Обновляем счетчик в навигации (если есть)
-        const cartCounter = document.querySelector('.nav__cart-counter');
+        // Обновляем счетчик в навигации Bootstrap (новый селектор)
+        const cartCounter = document.querySelector('.navbar .badge');
         if (cartCounter) {
-            cartCounter.textContent = `(${totalItems})`;
+            cartCounter.textContent = totalItems;
+        }
+        
+        // Также обновляем старый счетчик (если остался где-то)
+        const oldCartCounter = document.querySelector('.nav__cart-counter');
+        if (oldCartCounter) {
+            oldCartCounter.textContent = `(${totalItems})`;
         }
     }
     
-    // Добавляем обработчики для всех кнопок "В корзину"
-    const addToCartButtons = document.querySelectorAll('.product-card__btn:not(:disabled)');
+    // Добавляем обработчики для всех кнопок "В корзину" в Bootstrap-карточках
+    const addToCartButtons = document.querySelectorAll('.card .btn-primary:not(:disabled)');
     
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function() {
-            const productCard = this.closest('.product-card');
-            const productName = productCard.querySelector('.product-card__name').textContent;
+            const productCard = this.closest('.card');
+            const productName = productCard.querySelector('.card-title').textContent;
             
             // Получаем цену (учитываем старую и новую цену)
-            const priceElement = productCard.querySelector('.product-card__price-new') || 
-                               productCard.querySelector('.product-card__price');
+            let price = 0;
             
-            let priceText = priceElement.textContent;
+            // Ищем новую цену (есть скидка)
+            const newPriceElement = productCard.querySelector('.text-primary.h5');
+            if (newPriceElement) {
+                const priceText = newPriceElement.textContent;
+                price = parseInt(priceText.replace(/\D/g, '')) || 0;
+            }
             
-            // Извлекаем число из строки цены
-            const price = parseInt(priceText.replace(/\D/g, '')) || 0;
+            // Если цена не найдена, ищем в другом месте
+            if (price === 0) {
+                const priceElement = productCard.querySelector('.card-text');
+                if (priceElement) {
+                    const priceText = priceElement.textContent;
+                    price = parseInt(priceText.replace(/\D/g, '')) || 0;
+                }
+            }
             
             // Добавляем в корзину
             addToCart(productName, price);
             
             // Визуальный фидбэк
             const originalText = this.textContent;
+            const originalClass = this.className;
             this.textContent = 'Добавлено!';
-            this.style.backgroundColor = '#4CAF50';
+            this.className = 'btn btn-success btn-sm';
             
             setTimeout(() => {
                 this.textContent = originalText;
-                this.style.backgroundColor = '';
+                this.className = originalClass;
             }, 2000);
         });
     });
